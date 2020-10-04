@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import css from './counter.module.css';
 
-export default class DecrementButton extends Component {
-    handleButtonClick = () => {
-        this.props.onDecrement('-');
+export default function DecrementButton(props) {
+    const handleButtonClick = () => {
+        props.onDecrement('-');
     };
-
-    render() { 
-        return (  
-            <button className={`${css.button} ${css.red}`} onClick={this.handleButtonClick}> - </button>
-        );
-    }
+    return (
+        <button className={`${css.button} ${css.red}`} onClick={handleButtonClick}> - </button>
+    );
 }
- 
- 
+
